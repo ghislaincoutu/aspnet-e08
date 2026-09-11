@@ -1,0 +1,56 @@
+<section aria-labelledby="addresses-title" class="form45">
+  <h2 id="addresses-title">Adresses URL</h2>
+  <form (ngSubmit)="save()" #addressesForm="ngForm">
+    <div class="row45">
+      <div class="col01">
+        <label for="title">Titre*</label>
+        <input id="title" name="title" type="text" [(ngModel)]="addresses12.title" required>
+      </div>
+      <div class="col02">
+        <label for="url">Adresse URL*</label>
+        <input id="url" name="url" type="text" [(ngModel)]="addresses12.url" required>
+      </div>
+    </div>
+    <div class="row45">
+      <div class="col01">
+        <label for="enterprise">Entreprise*</label>
+        <input id="enterprise" name="enterprise" type="text" [(ngModel)]="addresses12.enterprise" required>
+      </div>
+      <div class="col02">
+        <label for="catId">Catégorie</label>
+        <input id="catId" name="catId" type="text" [(ngModel)]="addresses12.catId" class="catid">
+      </div>
+    </div>
+    <p style="margin-top:20px">* Champs obligatoires.</p>
+    <button type="submit" [disabled]="addressesForm.invalid">Enregistrer</button>
+  </form>
+</section>
+
+<div class="table-container">
+  <table class="table45">
+    <thead>
+      <tr>
+        <th>Cat</th>
+        <th>Titre</th>
+        <th>Adresse URL</th>
+        <th>Entreprise</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of addresses10">
+        <td>{{a.catId}}</td>
+        <td>{{a.title}}</td>
+        <td>{{a.url}}</td>
+        <td>{{a.enterprise}}</td>
+        <td>
+          <button (click)="edit(a)">Éditer</button>
+          <button (click)="delete(a.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Réinitialiser la base de données MySQL</h3>
+  <p>Suppression de tous les enregistrements et rétablissement de la table MySQL <code>addresses</code> originale.</p>
+  <div class="reset"><button>Réinitialiser</button></div>
+</div>

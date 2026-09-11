@@ -1,0 +1,145 @@
+$color01: hsl(238, 70%, 90%); // Saturation: 70
+$color02: hsl(238, 10%, 90%); // Saturation: 10
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 0 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #eee;
+}
+p {
+  margin: 0 0 6px 0;
+}
+input {
+  padding: 5px;
+  border: 1px solid #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+select {
+  padding: 5px;
+  border: 1px solid #666;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+button {
+  padding: 3px;
+  margin: 0 5px 0 0;
+  min-width: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+header {
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 280px;
+    background-color: $color01;
+    .themetitle {
+      margin: 0 0 6px 0;
+      padding: 0;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 2.8rem
+    }
+    .subtitle {
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.4rem
+    }
+  }
+}
+main {
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 280px;
+    background-color: #fff;
+    .technologies {
+      font-size: 1.4rem;
+      text-align: right;
+    }
+    h2 {
+      margin: 12px 0 6px 0;
+      font-size: 2rem;
+    }
+    h3 {
+      margin: 12px 0 6px 0;
+      font-size: 1.6rem
+    }
+    .reset {
+      margin: 10px 0;
+      padding: 8px;
+      background-color: $color02;
+    }
+  }
+}
+
+.form45 {
+  form {
+    padding: 10px;
+    background-color: $color02;
+  }
+  label {
+    display: block;
+    margin: 8px 0 5px 0;
+  }
+  input {
+    width: 100%;
+  }
+  textarea {
+    padding: 5px;
+    width: 100%;
+    min-height: 50px;
+    font-family: Arial, Helevica, sans-serif;
+    font-size: 1rem;
+  }
+  .row45 {
+    display: flex;
+    column-gap: 20px;
+    .col01 {
+      width: 50%;
+    }
+    .col02 {
+      width: 50%;
+    }
+  }
+  .catid {
+    width: 80px;
+    background-color: #ccc;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+.table45 {
+  margin: 12px 0;
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  border: none;
+  background-color: $color02;
+}
+.table45 thead {
+  color: #fff;
+  background-color: #000
+}
+.table45 th {
+  padding: 5px;
+  border: 1px solid #000;
+}
+.table45 td {
+  padding: 5px;
+  border: 1px solid #666;
+  vertical-align: top;
+}
