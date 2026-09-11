@@ -30,9 +30,24 @@ select {
 button {
   padding: 3px;
   margin: 0 5px 0 0;
-  min-width: 120px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+}
+button.btn-edit {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-image: url('assets/icons/edit.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+button.btn-delete {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-image: url('assets/icons/delete.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 header {
   .container {
@@ -115,7 +130,7 @@ main {
     width: 80px;
     background-color: #ccc;
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
 }
 
@@ -142,4 +157,13 @@ main {
   padding: 5px;
   border: 1px solid #666;
   vertical-align: top;
+}
+.table45 td:nth-child(1) {
+  width: 50px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.table45 td:nth-child(5) {
+  width: 80px;
+  text-align: center;
 }

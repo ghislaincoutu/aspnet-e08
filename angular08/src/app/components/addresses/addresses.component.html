@@ -44,13 +44,13 @@
         <td>{{a.url}}</td>
         <td>{{a.enterprise}}</td>
         <td>
-          <button (click)="edit(a)">Éditer</button>
-          <button (click)="delete(a.id)">Supprimer</button>
+          <button (click)="edit(a)" class="btn-edit"></button>
+          <button (click)="delete(a.id)" class="btn-delete"></button>
         </td>
       </tr>
     </tbody>
   </table>
   <h3>Réinitialiser la base de données MySQL</h3>
   <p>Suppression de tous les enregistrements et rétablissement de la table MySQL <code>addresses</code> originale.</p>
-  <div class="reset"><button>Réinitialiser</button></div>
+  <div class="reset"><button (click)="resetDatabase()">Réinitialiser</button></div>
 </div>

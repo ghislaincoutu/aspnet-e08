@@ -34,4 +34,8 @@ export class AddressesService {
   delete(id: number) {
     return this.http.delete(`${this.api}/${id}`);
   }
+
+  resetDatabase(): Observable<any> {
+    return this.http.post<any>(this.reset, {});
+  }
 }

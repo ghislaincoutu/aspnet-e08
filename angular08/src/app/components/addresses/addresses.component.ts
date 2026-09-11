@@ -15,7 +15,7 @@ export class AddressesComponent {
   addresses12: Addresses = { id: 0, catId: '', title: '', url: '', enterprise: '' };
 
   private readonly detector10 = inject(ChangeDetectorRef);
-  private resetDatabase = inject(AddressesService);
+  private reset = inject(AddressesService);
   constructor(private service: AddressesService) { }
 
   ngOnInit() {
@@ -50,5 +50,17 @@ export class AddressesComponent {
 
   delete(id: number) {
     this.service.delete(id).subscribe(() => this.load());
+  }
+
+  resetDatabase(): void {
+    this.reset.resetDatabase().subscribe({
+      next: (response) => {
+        alert(response.message);
+      },
+      error: (err) => {
+        console.error('Erreur lors de la réinitialisation', err);
+        alert('Une erreur est survenue lors de la réinitialisation.');
+      }
+    });
   }
 }
