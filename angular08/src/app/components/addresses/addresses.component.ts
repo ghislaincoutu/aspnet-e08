@@ -48,18 +48,39 @@ export class AddressesComponent {
     this.addresses12 = { ...a };
   }
 
-  delete(id: number) {
-    this.service.delete(id).subscribe(() => this.load());
+  delete(id: number): void {
+    const confirmation = window.confirm(
+      'Voulez-vous vraiment supprimer cet enregistrement?'
+    );
+    if (!confirmation) {
+      return;
+    }
+    this.service.delete(id).subscribe({
+      next: () => {
+        this.load();
+      },
+      error: (err) => {
+        console.error('Erreur lors de la suppression', err);
+        window.alert('Une erreur est survenue lors de la suppression.');
+      }
+    });
   }
 
   resetDatabase(): void {
+    const confirmation = window.confirm(
+      'Attention : tous les enregistrements seront supprimés. Voulez-vous continuer?'
+    );
+    if (!confirmation) {
+      return;
+    }
     this.reset.resetDatabase().subscribe({
       next: (response) => {
-        alert(response.message);
+        window.alert(response.message);
+        this.load();
       },
       error: (err) => {
         console.error('Erreur lors de la réinitialisation', err);
-        alert('Une erreur est survenue lors de la réinitialisation.');
+        window.alert('Une erreur est survenue lors de la réinitialisation.');
       }
     });
   }
