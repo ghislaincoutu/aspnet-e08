@@ -1,4 +1,5 @@
 # aspnet-e08 &mdash; Programmation d’une application Web (CRUD)
+<img src="related-files/medias/aspnet-e08.png" alt="Aperçu de l’interface" style="max-width:1000px;">
 
 ## Création des fichiers ASP.NET Web API
 À partir du dossier `aspnet-e08`, exécuter les commandes suivantes :
