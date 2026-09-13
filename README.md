@@ -57,9 +57,13 @@ Création de la base de données.
 sudo mysql -u root -p
 CREATE DATABASE aspnet08;
 ```
-Exportation de la base de données.
+Exportation de la base de données `aspnet08`.
 ```sh
 sudo mysqldump -u root -p --routines --triggers --events aspnet08 > aspnet08.sql
+```
+Exportation de la base de données `webaddresses`.
+```sh
+sudo mysqldump -u root -p webaddresses > webaddresses.sql
 ```
 Création de la procédure `reset_database()` dans la base de données `aspnet08`.
 ```sql
