@@ -31,6 +31,10 @@ export class AddressesService {
     return this.http.put(`${this.api}/${addresses.id}`, addresses);
   }
 
+  get(id: number): Observable<Addresses> {
+    return this.http.get<Addresses>(`${this.api}/${id}`);
+  }
+
   delete(id: number) {
     return this.http.delete(`${this.api}/${id}`);
   }

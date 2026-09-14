@@ -1,0 +1,29 @@
+<section aria-labelledby="edit-address-title" class="form45">
+  <h2 id="edit-address-title">Édition de l’adresse URL</h2>
+  <form (ngSubmit)="save()" #editForm="ngForm">
+    <div class="row45">
+      <div class="col01">
+        <label for="title">Titre*</label>
+        <input id="title" name="title" type="text" [(ngModel)]="addresses12.title" required>
+      </div>
+      <div class="col02">
+        <label for="url">Adresse URL*</label>
+        <input id="url" name="url" type="text" [(ngModel)]="addresses12.url" required>
+      </div>
+    </div>
+    <div class="row45">
+      <div class="col01">
+        <label for="enterprise">Entreprise*</label>
+        <input id="enterprise" name="enterprise" type="text" [(ngModel)]="addresses12.enterprise" required>
+      </div>
+      <div class="col02">
+        <label for="catId">Catégorie</label>
+        <input id="catId" name="catId" type="text" [(ngModel)]="addresses12.catId" class="catid">
+      </div>
+    </div>
+    <p style="margin-top:20px">* Champs obligatoires.</p>
+    <button type="submit" [disabled]="editForm.invalid">
+      Enregistrer
+    </button>
+  </form>
+</section>

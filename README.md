@@ -21,6 +21,7 @@ Au cours de la création des fichiers, sélectionner les options par défaut.
 ```sh
 ng generate service services/addresses --type=service
 ng generate component components/addresses --type=component
+ng generate component components/edit-address --type=component
 ```
 
 ## Installation des dépendances requises
