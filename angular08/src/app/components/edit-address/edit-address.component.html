@@ -1,4 +1,4 @@
-<section aria-labelledby="edit-address-title" class="form45">
+<section aria-labelledby="edit-address-title" class="form45 animated01 fadein">
   <h2 id="edit-address-title">Édition de l’adresse URL</h2>
   <form (ngSubmit)="save()" #editForm="ngForm">
     <div class="row45">
@@ -24,6 +24,9 @@
     <p style="margin-top:20px">* Champs obligatoires.</p>
     <button type="submit" [disabled]="editForm.invalid">
       Enregistrer
+    </button>
+    <button type="button" onclick="window.history.back();">
+      Annuler
     </button>
   </form>
 </section>
