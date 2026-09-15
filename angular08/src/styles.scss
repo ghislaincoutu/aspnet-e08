@@ -1,7 +1,5 @@
-@use "styles/effects.scss";
-
-$color01: hsl(238, 70%, 90%); // Saturation: 70
-$color02: hsl(238, 10%, 90%); // Saturation: 10
+@use 'styles/_variables.scss' as *;
+@use "styles/_effects.scss";
 
 * {
   box-sizing: border-box;
@@ -16,6 +14,7 @@ body {
 p {
   margin: 0 0 6px 0;
 }
+
 input {
   padding: 5px;
   border: 1px solid #666;
@@ -53,6 +52,7 @@ button.btn-delete {
   background-repeat: no-repeat;
   background-color: transparent;
 }
+
 header {
   .container {
     margin: 0 auto;
@@ -74,6 +74,7 @@ header {
     }
   }
 }
+
 main {
   .container {
     margin: 0 auto;
@@ -181,5 +182,19 @@ footer {
     color: #fff;
     background-color: #000;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  main .container .technologies {
+    text-align: left;
+  }
+  .form45 {
+    .row45 {
+      display: block;
+      .col01, .col02 {
+        width: 100%;
+      }
+    }
   }
 }
