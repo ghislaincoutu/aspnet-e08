@@ -169,3 +169,15 @@ main {
   width: 80px;
   text-align: center;
 }
+
+footer {
+  .container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 280px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+  }
+}
